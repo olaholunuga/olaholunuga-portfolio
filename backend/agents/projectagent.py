@@ -5,8 +5,7 @@ class ProjectAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="TechExpert",
-            description="I'm the project specialist. I can provide detailed information about any project in this portfolio.",
-            avatar="project_avatar.png"
+            description="I'm the project specialist. I can provide detailed information about any project in this portfolio."
         )
 
         self.projects = {

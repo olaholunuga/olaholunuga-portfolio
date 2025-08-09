@@ -8,8 +8,7 @@ class ResearchAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="ResearchAssistant",
-            description="I'm the research specialist. I can search the web for information about technologies, trends, and industry news.",
-            avatar="research_avatar.png"
+            description="I'm the research specialist. I can search the web for information about technologies, trends, and industry news."
         )
         self.api_key = os.getenv("GROQ_API_KEY")
 

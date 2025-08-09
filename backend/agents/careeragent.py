@@ -5,8 +5,7 @@ class CareerAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="CareerGuide",
-            description="I'm the career specialist. I can provide information about skills, experience, and job suitability.",
-            avatar="career_avatar.png"
+            description="I'm the career specialist. I can provide information about skills, experience, and job suitability."
         )
 
         self.skills = {

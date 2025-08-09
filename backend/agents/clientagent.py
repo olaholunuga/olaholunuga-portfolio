@@ -5,8 +5,7 @@ class ClientAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="BusinessAdvisor",
-            description="I'm the client specialist. I can provide information about services, pricing, and project details.",
-            avatar="client_avatar.png"
+            description="I'm the client specialist. I can provide information about services, pricing, and project details."
         )
 
         self.services = {

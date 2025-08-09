@@ -5,9 +5,8 @@ class WelcomeAgent(BaseAgent):
     def __init__(self):
         super().__init__(
             name="Greeter",
-            description="I'm the welcome agent for this portfolio. I can help guide you to the right section based on your interests.",
-            avatar="welcome_avatar.png"
-        )
+            description="I'm the welcome agent for this portfolio. I can help guide you to the right section based on your interests."
+		)
 
     def greet(self, visitor_type=None):
 

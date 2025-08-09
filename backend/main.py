@@ -81,7 +81,6 @@ def project_agent_endpoint():
     elif 'list' in message.lower() or 'all projects' in message.lower():
         response = project_agent.get_project_list()
     elif project_id:
-
         response = project_agent.answer_technical_question(project_id, message)
     else:
 
@@ -175,6 +174,6 @@ if __name__ == '__main__':
         response.headers['Pragma'] = 'no-cache'
         response.headers['Expires'] = '0'
         return response
-
+    print(os.getenv("GROQ_API_KEY"))
     app.run(host='0.0.0.0', port=5001, debug=True,
             use_reloader=False, threaded=True)
