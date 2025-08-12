@@ -7,7 +7,7 @@ Provides:
 """
 
 from flask import Blueprint, request, jsonify, current_app
-from ...db import get_db
+from ..db import get_db
 from ..models import ContactMessage
 from ..rate_limit import rate_limit
 
