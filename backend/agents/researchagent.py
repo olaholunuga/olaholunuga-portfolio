@@ -24,28 +24,7 @@ class ResearchAgent(BaseAgent):
             "messages": [
                 {"role": "system", "content": "You are a helpful research assistant."},
                 {"role": "user", "content": f"Search the web for: {query}"}
-            ],
-            # "tools": [
-            #     {
-            #         "type": "web_search"
-            #     }
-            # ]
-            # "tools": [
-            #     {
-            #         "type": "function",
-            #         "function": {
-            #             "name": "search_web",
-            #             "description": "Search the web for the given query",
-            #             "parameters": {
-            #                 "type": "object",
-            #                 "properties": {
-            #                     "query": {"type": "string"}
-            #                     },
-            #                     "required": ["query"]
-            #                     }
-            #                     }
-            #     }
-            #     ]
+            ]
         }
 
         try:
