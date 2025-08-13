@@ -10,6 +10,8 @@ from flask import Blueprint, jsonify, request
 from ..rate_limit import rate_limit
 from ..db import get_db
 from ..models import Skill
+from ..auth import auth_required
+from ..auth_jwt import jwt_required
 
 bp = Blueprint("skills", __name__, url_prefix="/api/skills")
 
@@ -23,6 +25,7 @@ def list_skills():
     return jsonify({"skills": payload})
 
 @bp.route("", methods=["POST"])
+@jwt_required(role="admin")
 @rate_limit()
 def add_skill():
     """

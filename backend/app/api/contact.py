@@ -10,10 +10,12 @@ from flask import Blueprint, request, jsonify, current_app
 from ..db import get_db
 from ..models import ContactMessage
 from ..rate_limit import rate_limit
+from ..auth_jwt import jwt_required
 
 bp = Blueprint("contact", __name__, url_prefix="/api/contact")
 
 @bp.route("", methods=["POST"])
+@jwt_required(role="admin")
 @rate_limit()
 def submit_contact():
     """
