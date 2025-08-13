@@ -10,7 +10,6 @@ from flask import Blueprint, jsonify, request, current_app
 from ..db import get_db
 from ..rate_limit import rate_limit
 from ..models import Project  # declarative model
-from ..auth import auth_required
 from ..auth_jwt import jwt_required
 
 bp = Blueprint("projects", __name__, url_prefix="/api/projects")

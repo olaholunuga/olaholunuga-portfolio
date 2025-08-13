@@ -9,7 +9,7 @@ Auth endpoints:
 from flask import Blueprint, request, jsonify, current_app
 from ..security import hash_password, verify_password
 from ..auth_jwt import generate_access_token, generate_refresh_token, verify_refresh_token, revoke_refresh_token, jwt_required
-from ...app.db import get_db  # note: relative import may differ based on your tree
+from ..db import get_db  # note: relative import may differ based on your tree
 from ..models_user import User
 
 bp = Blueprint("auth", __name__, url_prefix="/api/auth")

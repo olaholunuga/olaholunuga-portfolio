@@ -10,7 +10,6 @@ from flask import Blueprint, jsonify, request
 from ..rate_limit import rate_limit
 from ..db import get_db
 from ..models import Skill
-from ..auth import auth_required
 from ..auth_jwt import jwt_required
 
 bp = Blueprint("skills", __name__, url_prefix="/api/skills")
