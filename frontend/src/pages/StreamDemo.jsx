@@ -48,10 +48,10 @@ export default function StreamDemo() {
   }, [chunks]);
 
   const sendMessage = () => {
-    console.log("Sending:", { agent: "demo_stream", message, stream: true });
+    console.log("Sending:", { agent: "welcome", message, stream: true });
     if (!socket) return;
     socket.emit("chat_message", {
-      agent: "demo_stream",
+      agent: "welcome",
       message,
       stream: true,
     });
