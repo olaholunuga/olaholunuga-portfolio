@@ -1,8 +1,9 @@
-from agents.welcomeagent import WelcomeAgent
-from agents.projectagent import ProjectAgent
-from agents.careeragent import CareerAgent
-from agents.clientagent import ClientAgent
-from agents.researchagent import ResearchAgent
+from .welcomeagent import WelcomeAgent
+from .projectagent import ProjectAgent
+from .careeragent import CareerAgent
+from .clientagent import ClientAgent
+from .researchagent import ResearchAgent
+from .demo_stream_agent import DemoStreamAgent
 
 # Export all agents
-__all__ = ['WelcomeAgent', 'ProjectAgent', 'CareerAgent', 'ClientAgent', 'ResearchAgent']
+__all__ = ['WelcomeAgent', 'ProjectAgent', 'CareerAgent', 'ClientAgent', 'ResearchAgent', 'DemoStreamAgent']

@@ -1,4 +1,4 @@
-from agents.baseagent import BaseAgent
+from .baseagent import BaseAgent
 
 
 class ClientAgent(BaseAgent):

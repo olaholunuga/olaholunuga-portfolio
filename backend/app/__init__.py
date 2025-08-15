@@ -10,6 +10,7 @@ from .agents.projectagent import ProjectAgent
 from .agents.careeragent import CareerAgent
 from .agents.clientagent import ClientAgent
 from .agents.researchagent import ResearchAgent
+from .agents.demo_stream_agent import DemoStreamAgent
 
 def create_app(config_class=Config):
     app = Flask(__name__, static_folder="../frontend/dist", template_folder="../frontend/dist")
@@ -27,7 +28,8 @@ def create_app(config_class=Config):
         "project": ProjectAgent(),
         "career": CareerAgent(),
         "client": ClientAgent(),
-        "research": ResearchAgent()
+        "research": ResearchAgent(),
+        "demo_stream": DemoStreamAgent(),  
     }
 
     # Register blueprints
@@ -42,6 +44,6 @@ def create_app(config_class=Config):
     socketio.init_app(app, async_mode=app.config["SOCKETIO_ASYNC_MODE"])
 
     # Import socket handlers *after* socketio is ready to avoid circular import
-    # from . import socket_handlers  # noqa: E402
+    from . import socket_handlers  # noqa: E402
 
     return app
