@@ -6,11 +6,11 @@ import requests
 from flask_cors import CORS
 
 
-load_dotenv()
+# load_dotenv()
 
 
-# app = Flask(__name__)
-# CORS(app)
+# # app = Flask(__name__)
+# # CORS(app)
 
 
 class BaseAgent:
